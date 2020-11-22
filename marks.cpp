@@ -3,10 +3,10 @@
 using namespace std;
 class details
 {
-    protected:
+    
+    public:
     int rollno;
     char studentname[25];
-    public:
     void readdetails()
     {
         cout<<"Enter Student Roll Number: ";
@@ -17,13 +17,13 @@ class details
 };
 class marks : public details
 {
-    protected:
+    public:
     int t1[6],t2[6],tm[6],IATests[6];
     int projmarks[6],IAproj[6];
     int lm[6],IAlm[6];
     int pm[6],IApm[6];
     int att[6],watt[6],IAatt[6],attpercentage[6];
-    int sm[6];
+    int sm[6], IAsem[6];
     int IA[6];
     int total, avg;
 
@@ -96,7 +96,7 @@ class marks : public details
         }
         for(int i=0;i<6;i++)
         {
-            IAlab[i]=lm[i]/4;
+            IAlm[i]=lm[i]/4;
         }
         
     }
@@ -229,7 +229,7 @@ int main()
 		cout << obj.studentname << "\n";
 		cout << objt.IATests << "\n";
 		cout << objt.IAproj << "\n";
-		cout << objt.IAlab << "\n";
+		cout << objt.IAlm << "\n";
 		cout << objt.IApm << "\n";
 		cout << objt.IAatt << "\n";
 		cout << objt.IAsem << "\n";
