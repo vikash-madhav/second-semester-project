@@ -58,7 +58,7 @@ class marks : public details
         }
         for(int i=0;i<6;i++)
         {
-            IATests[i]=tm[i]/4;
+            IATests[i]=(tm[i]/4);
         }
     }
 
@@ -77,7 +77,7 @@ class marks : public details
         }
         for(int i=0;i<6;i++)
         {
-            IAproj[i]=projmarks[i]/4;
+            IAproj[i]=(projmarks[i]/4);
         }
     }
 
@@ -96,7 +96,7 @@ class marks : public details
         }
         for(int i=0;i<6;i++)
         {
-            IAlm[i]=lm[i]/4;
+            IAlm[i]=(lm[i]/4);
         }
         
     }
@@ -115,7 +115,7 @@ class marks : public details
         }
         for(int i=0;i<6;i++)
         {
-            IApm[i]=pm[i]/14;
+            IApm[i]=(pm[i]/14);
         }
 
     }
@@ -139,7 +139,7 @@ class marks : public details
         }
         for(int i=0;i<6;i++)
         {
-            attpercentage[i]=(att[i]/watt[i])*100;
+            attpercentage[i]=(IAatt[i]/watt[i])*100;
         }
         for(int i=0;i<6;i++)
         {
@@ -185,7 +185,7 @@ class marks : public details
         }
         for(int i=0;i<6;i++)
         {
-            IAsem[i]=sm[i]/14;
+            IAsem[i]=(sm[i]/14);
         }
     }
 
@@ -193,7 +193,7 @@ class marks : public details
     {
         for(int i=0;i<6;i++)
         {
-            IA[i]=IATests[i]+IAproj[i]+IAlm[i]+IApm[i]+IAatt[i];
+            IA[i]=(IATests[i]+IAproj[i]+IAlm[i]+IApm[i]+IAatt[i]);
         }
     }
 
@@ -201,7 +201,7 @@ class marks : public details
     {
         for(int i=0;i<6;i++)
             {
-                total=sm[i]+IA[i];
+                total=(IAsem[i]+IA[i]);
             }
     }
 
@@ -224,16 +224,17 @@ int main()
 		objt.IAmarks();
 		objt.totalmarks();
 		objt.Average();
-		return 0;
 		cout << obj.rollno << "\n";
 		cout << obj.studentname << "\n";
 		cout << objt.IATests << "\n";
 		cout << objt.IAproj << "\n";
 		cout << objt.IAlm << "\n";
 		cout << objt.IApm << "\n";
-		cout << objt.IAatt << "\n";
+		cout << objt.attpercentage << "\n";
 		cout << objt.IAsem << "\n";
 		cout << objt.IA << "\n";
 		cout << objt.total << "\n";
 		cout << objt.avg << "\n";
+		
+		return 0;
 	}
